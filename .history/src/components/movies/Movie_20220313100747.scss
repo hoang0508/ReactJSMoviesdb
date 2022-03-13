@@ -1,0 +1,9 @@
+@import "../../index.scss";
+.movie {
+  margin-bottom: 40px;
+  color: #fff;
+  &-heading {
+    font-size: 35px;
+    font-weight: 700;
+  }
+}

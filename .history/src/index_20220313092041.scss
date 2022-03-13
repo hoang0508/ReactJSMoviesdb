@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+$font: "DM Sans", sans-serif;
+$primary-color: #e8256c;
+body {
+  background-color: rgb(30, 41, 59);
+  font-family: $font;
+}
+
+.button {
+  display: inline-block;
+  background-color: $primary-color;
+  color: #fff;
+  &-btn--primary {
+    padding: 15px 30px;
+  }
+  &-btn--secondary {
+    width: 100%;
+  }
+}

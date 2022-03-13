@@ -1,0 +1,19 @@
+@import "../../index.scss";
+.movie {
+  margin-bottom: 40px;
+  color: #fff;
+  &-heading {
+    font-size: 35px;
+    font-weight: 700;
+  }
+  &-list {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 40px;
+  }
+  &-item {
+    padding: 12px;
+    background-color: $bg-color;
+  }
+}
