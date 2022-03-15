@@ -55,16 +55,6 @@ $bg-color: rgb(30, 41, 59);
 $bg-color-mv: rgb(15, 23, 42);
 $primary-color: #e8256c;
 
-// scroll bar css
-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
-  border-radius: 10px;
-}
-
 body {
   background-color: $bg-color;
   color: #fff;

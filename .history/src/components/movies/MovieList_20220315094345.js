@@ -19,6 +19,7 @@ const MovieList = ({ type = "now_playing" }) => {
   useEffect(() => {
     setMovie(data?.results);
   }, [data]);
+  console.log("🚀 ~ file: MovieList.js ~ line 13 ~ MovieList ~ movie", movie);
 
   return (
     <div className="movie-list">

@@ -1,0 +1,16 @@
+@import "../../index.scss";
+.header {
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 15px;
+  padding: 20px;
+  &-text {
+    color: #fff;
+  }
+  &-active {
+    color: $primary-color;
+  }
+}

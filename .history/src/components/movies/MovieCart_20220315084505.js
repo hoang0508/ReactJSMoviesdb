@@ -1,14 +1,7 @@
 import React from "react";
 import { FaStar, FaPlay } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
 const MovieCart = ({ item }) => {
-  const { poster_path, title, vote_average, release_date, id } = item;
-  // navigate page details
-  const navigate = useNavigate();
-  const handleClickNavigate = (e) => {
-    e.preventDefault();
-    navigate(`/movie/${id}`);
-  };
+  const { poster_path, title, vote_average, release_date } = item;
   return (
     <div className="movie-item">
       <div className="movie-images">
@@ -25,10 +18,7 @@ const MovieCart = ({ item }) => {
             <FaStar className="movie-icon" />
           </div>
         </div>
-        <button
-          onClick={(e) => handleClickNavigate(e)}
-          className="movie-btn button button--primary button--secondary"
-        >
+        <button className="movie-btn button button--primary button--secondary">
           <span>Watch now</span>
           <FaPlay />
         </button>

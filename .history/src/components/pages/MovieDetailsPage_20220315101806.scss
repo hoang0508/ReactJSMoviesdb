@@ -1,0 +1,10 @@
+.pageDetails {
+  &-bg {
+    height: 600px;
+    position: relative;
+  }
+  &-bg--big {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}

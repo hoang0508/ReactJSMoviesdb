@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+.page {
+  &-search {
+    width: 100%;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+}

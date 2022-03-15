@@ -19,7 +19,6 @@ const MovieList = ({ type = "now_playing" }) => {
   useEffect(() => {
     setMovie(data?.results);
   }, [data]);
-
   return (
     <div className="movie-list">
       <Swiper grabCursor={"true"} spaceBetween={40} slidesPerView={"auto"}>

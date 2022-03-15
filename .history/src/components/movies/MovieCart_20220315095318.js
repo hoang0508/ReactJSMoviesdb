@@ -9,6 +9,7 @@ const MovieCart = ({ item }) => {
     e.preventDefault();
     navigate(`/movie/${id}`);
   };
+
   return (
     <div className="movie-item">
       <div className="movie-images">
