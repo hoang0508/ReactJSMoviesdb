@@ -1,0 +1,28 @@
+@import "../../index.scss";
+
+.page {
+  &-search {
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  &-input {
+    width: 100%;
+    input {
+      width: 100%;
+      padding: 12px;
+      background-color: $bg-color-mv;
+      // border: 1px solid $bg-color-mv;
+    }
+  }
+  &-btn {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 15px 24px;
+  }
+  &-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 40px;
+  }
+}
