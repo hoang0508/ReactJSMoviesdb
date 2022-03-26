@@ -1,0 +1,19 @@
+.tvOnline {
+  padding: 20px 0;
+  position: relative;
+  &-images {
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+}
+  }
+}

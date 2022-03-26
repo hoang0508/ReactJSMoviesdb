@@ -1,0 +1,10 @@
+@import "../../index.scss";
+
+.tvDetails {
+  padding: 30px 0;
+  &-main {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+  }
+}
