@@ -1,0 +1,94 @@
+@import "../../index.scss";
+.header {
+  color: #fff;
+  font-size: 18px;
+  gap: 0 15px;
+  padding: 40px 0px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      font-size: 45px;
+      color: $primary-color;
+    }
+    &-text {
+      color: $primary-color;
+    }
+  }
+  &-menu {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+
+  &-white {
+    color: #fff;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #e8256c;
+      transition: all 0.25s linear;
+    }
+  }
+  &-white:hover::before {
+    width: 100%;
+  }
+  &-active {
+    color: $primary-color;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #e8256c;
+      transition: all 0.25s linear;
+    }
+  }
+  &-active:hover::before {
+    width: 100%;
+  }
+  &-noti {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+  &-bell {
+    position: relative;
+    &--icon {
+      position: relative;
+      font-size: 25px;
+    }
+    &--number {
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      background-color: #e8256c;
+      border-radius: 100rem;
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

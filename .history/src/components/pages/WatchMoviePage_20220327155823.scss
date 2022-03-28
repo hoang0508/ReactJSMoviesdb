@@ -1,0 +1,11 @@
+.watchMovie {
+  &-main {
+    display: flex;
+    align-items: center;
+    gap: 0 50px;
+  }
+  &-video {
+    width: 60%;
+    height: 450px;
+  }
+}

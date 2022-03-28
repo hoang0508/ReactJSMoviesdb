@@ -1,0 +1,22 @@
+.watchMovie {
+  padding: 40px 0;
+  &-main {
+    display: flex;
+    gap: 0 50px;
+  }
+  &-video {
+    width: 60%;
+    height: 450px;
+  }
+  &-content {
+    width: 30%;
+  }
+  &-images {
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
