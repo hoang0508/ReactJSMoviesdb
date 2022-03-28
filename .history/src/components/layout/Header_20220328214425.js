@@ -18,7 +18,7 @@ const Header = () => {
                 <span className="header-logo--text">HHmovie</span>
               </div>
               <div className="header-menu">
-                <div className="header-menu--list">
+                <div>
                   <NavLink
                     to="/"
                     className={({ isActive }) =>

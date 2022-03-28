@@ -107,18 +107,9 @@
       top: 0;
       left: 0;
       bottom: 0;
-      z-index: 20;
       max-width: 320px;
       width: 100%;
-      background-color: $bg-color-mn;
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
-      gap: 20px 0;
-      transform: translateX(-100%);
-      a {
-        font-size: 20px;
-      }
+      background-color: #fff;
     }
   }
 }

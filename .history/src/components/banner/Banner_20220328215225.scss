@@ -59,22 +59,8 @@
   }
   @media screen and (max-width: 1023.98px) {
     margin-bottom: 20px;
-    &-btn {
-      padding: 12px 20px !important;
-    }
     &-images {
       height: 450px;
-    }
-    &-heading {
-      margin-bottom: 15px;
-    }
-    &-desc {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      word-break: break-word;
     }
   }
 }

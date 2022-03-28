@@ -95,13 +95,10 @@
       max-width: 600px;
       height: 350px;
     }
-    &-casts {
-      margin-bottom: 50px;
-    }
-    &-casts--list {
+    &-cast--list {
       grid-gap: 0 10px;
     }
-    &-casts--images {
+    &-cast--images {
       height: 250px;
     }
   }

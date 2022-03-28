@@ -58,7 +58,6 @@ li {
 $font: "DM Sans", sans-serif;
 $bg-color-mv: rgb(30, 41, 59);
 $bg-color: rgb(15, 23, 42);
-$bg-color-mn: rgb(71 85 105);
 $primary-color: #e8256c;
 $secondary-color: rgb(113, 0, 128);
 
@@ -81,12 +80,7 @@ body {
 .container {
   max-width: 1280px;
   margin: 0 auto;
-}
-
-@media screen and (max-width: 1023.98px) {
-  .container {
-    padding: 15px;
-  }
+  padding: 10px;
 }
 
 // Button

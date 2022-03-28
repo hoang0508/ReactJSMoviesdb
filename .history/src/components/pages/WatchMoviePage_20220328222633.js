@@ -59,12 +59,11 @@ const CreditWatch = () => {
     <>
       {casts &&
         casts.length > 0 &&
-        casts.slice(0, 6).map((item) => (
-          <span className="watchMovie-cast" key={item.id}>
-            {" "}
-            {item.name},{" "}
-          </span>
-        ))}
+        casts
+          .slice(0, 6)
+          .map((item) => (
+            <span className="watchMovie-cast"> {item.name}, </span>
+          ))}
     </>
   );
 };
@@ -80,7 +79,7 @@ const WatctMovieUpdate = () => {
         {dataUpdate &&
           dataUpdate.length > 0 &&
           dataUpdate.slice(0, 5).map((item) => (
-            <div className="watchMovie-update--images" key={item.id}>
+            <div className="watchMovie-update--images">
               <img src={tmdbAPI.imagesOriginal(item.poster_path)} alt="" />
             </div>
           ))}

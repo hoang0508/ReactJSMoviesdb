@@ -22,7 +22,7 @@ const TvPageDetails = () => {
     <>
       <div className="tvDetails">
         <div className="container">
-          <h2 className="movie-heading">Tv Details</h2>
+          <h3 className="movie-heading">Tv Details</h3>
           <div className="tvDetails-main">
             <div className="tvDetails-left">
               <div className="tvDetails-images">
