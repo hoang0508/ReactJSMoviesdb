@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+//
+$font: "DM Sans", sans-serif;
+$bg-color-mv: rgb(30, 41, 59);
+$bg-color: rgb(15, 23, 42);
+$bg-color-mn: rgba(0, 0, 0, 0.9);
+$primary-color: #e8256c;
+$secondary-color: rgb(113, 0, 128);
+
+// scroll bar css
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  border-radius: 10px;
+}
+
+body {
+  background-color: $bg-color;
+  color: #fff;
+  font-family: $font;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+// Button
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 15px;
+  background-color: $primary-color;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+  }
+  @media screen and (min-width: 1024px) {
+    &--primary {
+      padding: 15px 30px;
+    }
+    &--secondary {
+      width: 100%;
+      padding: 15px 25px;
+      border-radius: 8px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.07);
+        width: 0;
+        height: 100%;
+        transition: all 0.5s linear;
+        border-radius: 8px;
+      }
+      &:hover::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// slider swiper custom
+.movie-list .swiper-slide {
+  width: 300px !important;
+  height: auto;
+}
+
+//
+.movie-list--provider .swiper-slide {
+  width: 100px !important;
+}
+
+// global heading
+.movie-heading {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  transition: all 0.25s linear;
+  position: relative;
+  padding-right: 20px;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    top: 50%;
+    left: 100%;
+    background-color: $primary-color;
+  }
+  @media screen and (max-width: 767.98px) {
+    font-size: 25px;
+  }
+}
+
+// pagination
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  cursor: pointer;
+  @media screen and (min-width: 1024px) and (max-width: 1023) {
+    gap: 20px;
+  }
+
+  .selected {
+    color: $primary-color;
+  }
+}
+
+// Previous, Next
+.previous,
+.next {
+  a {
+    background-color: #e8256c;
+    color: #fff;
+    padding: 6px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+  }
+}
+
+// loading
+.movie-loading {
+  width: 60px;
+  height: 60px;
+  border-radius: 100rem;
+  border: 5px solid $primary-color;
+  border-top: 5px solid transparent;
+  margin: 30px auto;
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// Provider
+.provider-img {
+  height: 100px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+// Movie Video Iframe
+//
+.movie-video {
+  margin-bottom: 40px;
+  &--trailer {
+    margin-bottom: 30px;
+  }
+  &--title {
+    margin-bottom: 15px;
+  }
+  &--iframe {
+    width: 100%;
+    padding-top: 56.25%;
+    position: relative;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

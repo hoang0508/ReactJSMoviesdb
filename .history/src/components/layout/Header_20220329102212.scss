@@ -1,0 +1,142 @@
+@import "../../index.scss";
+.header {
+  color: #fff;
+  font-size: 18px;
+  gap: 0 15px;
+  padding: 40px 0px;
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-nav {
+    display: flex;
+    align-items: center;
+    gap: 0 40px;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+
+    &--icon {
+      font-size: 45px;
+      color: $primary-color;
+    }
+    &--text {
+      background: -webkit-linear-gradient(
+        $secondary-color,
+        $primary-color,
+        #fff
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 30px;
+      font-weight: 700;
+    }
+  }
+  &-menu {
+    &--list {
+      display: flex;
+      align-items: center;
+      gap: 0 30px;
+    }
+  }
+
+  &-white {
+    color: #fff;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #e8256c;
+      transition: all 0.25s linear;
+    }
+  }
+  &-white:hover::before {
+    width: 100%;
+  }
+  &-active {
+    color: $primary-color;
+    position: relative;
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -5px;
+      width: 0;
+      height: 3px;
+      background-color: #e8256c;
+      transition: all 0.25s linear;
+    }
+  }
+  &-active:hover::before {
+    width: 100%;
+  }
+  &-noti {
+    display: flex;
+    align-items: center;
+    gap: 0 20px;
+  }
+  &-bell {
+    position: relative;
+    &--icon {
+      position: relative;
+      font-size: 25px;
+    }
+    &--number {
+      position: absolute;
+      top: -50%;
+      right: -30%;
+      background-color: #e8256c;
+      border-radius: 100rem;
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    &-menu--icon {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 767.98px) {
+    &-header {
+      padding: 20px 0;
+    }
+    &-nav {
+      gap: 0 20px;
+    }
+    &-logo--text {
+      font-size: 20px;
+    }
+    &-menu--list {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      z-index: 20;
+      max-width: 320px;
+      width: 100%;
+      background-color: $bg-color-mn;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      gap: 20px 0;
+      transform: translateX(-100%);
+      a {
+        font-size: 20px;
+      }
+    }
+    &-menu--icon {
+      display: block;
+      font-size: 25px;
+    }
+  }
+}
