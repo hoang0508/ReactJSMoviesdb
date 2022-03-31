@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useSWR from "swr";
 import { fetcher, tmdbAPI } from "../../config";
 // Import Swiper React components
@@ -7,19 +7,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "./tvPageDetails.scss";
-import Button from "../button/Button";
 const TvPageDetails = () => {
-  // Param
   const { id } = useParams();
-  // Navigate
-  const navigate = useNavigate();
-  const handleTvMovie = () => {
-    navigate(`watchTV/${id}`);
-  };
-  // Call API
   const { data } = useSWR(tmdbAPI.getMovieTV(id), fetcher);
   if (!data) return null;
-  //
   const {
     backdrop_path,
     first_air_date,
@@ -39,7 +30,7 @@ const TvPageDetails = () => {
               backgroundImage: `url(${tmdbAPI.imagesOriginal(poster_path)})`,
             }}
           >
-            <div className="overlay"></div>
+            <div className="tvDetails-overlay"></div>
             <div className="tvDetails-main--movie">
               <div className="tvDetails-left">
                 <div className="tvDetails-images">
@@ -53,12 +44,6 @@ const TvPageDetails = () => {
                   <span>End: {last_air_date}</span>
                 </div>
                 <p className="tvDetails-desc">{overview}</p>
-                <Button
-                  className={`tvDetails-btn`}
-                  onClick={() => handleTvMovie(data.id)}
-                >
-                  Watch TV
-                </Button>
                 <CreditsMovieTV />
               </div>
             </div>

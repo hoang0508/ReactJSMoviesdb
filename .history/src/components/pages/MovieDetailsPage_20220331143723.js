@@ -31,7 +31,7 @@ const MovieDetailsPage = () => {
             backgroundImage: `url(${tmdbAPI.imagesOriginal(backdrop_path)})`,
           }}
         >
-          <div className="overlay"></div>
+          <div className="pageDetails-overlay"></div>
         </div>
       </div>
       <div className="pageDetails-bg--small">

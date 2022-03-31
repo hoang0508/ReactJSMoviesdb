@@ -1,0 +1,18 @@
+@import "../../index.scss";
+.watchTV {
+  padding: 30px 0;
+  &-video {
+    padding: 20px 0;
+    width: 100%;
+    &--iframe {
+      height: 500px;
+    }
+  }
+  &-select {
+    max-width: 400px;
+    width: 100%;
+    padding: 12px;
+    background-color: $bg-color-mv;
+    color: #fff;
+  }
+}

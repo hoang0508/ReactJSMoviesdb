@@ -1,0 +1,9 @@
+.watchTV {
+  &-video {
+    padding: 20px 0;
+    width: 100%;
+    &--iframe {
+      height: 500px;
+    }
+  }
+}

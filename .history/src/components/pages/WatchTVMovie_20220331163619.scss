@@ -1,0 +1,14 @@
+.watchTV {
+  &-video {
+    padding: 20px 0;
+    width: 100%;
+    &--iframe {
+      height: 500px;
+    }
+  }
+  &-select {
+    max-width: 400px;
+    width: 100%;
+    padding: 12px;
+  }
+}

@@ -95,10 +95,10 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0 15px;
+  background-color: $primary-color;
   color: #fff;
   cursor: pointer;
   position: relative;
-  background-color: $primary-color;
   &::before {
     content: "";
     position: absolute;
@@ -141,8 +141,8 @@ body {
   position: absolute;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.6)
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
   );
   inset: 0;
   z-index: -1;

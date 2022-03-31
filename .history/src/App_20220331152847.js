@@ -1,6 +1,7 @@
 import React, { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
 import Main from "./components/layout/Main";
+import WatchTvMovie from "./components/pages/WatchTvMovie";
 
 const HomePage = lazy(() => import("./components/pages/HomePage"));
 const MovieDetailsPage = lazy(() =>
@@ -10,7 +11,6 @@ const MoviePage = lazy(() => import("./components/pages/MoviePage"));
 const TVPage = lazy(() => import("./components/pages/TVPage"));
 const TvPageDetails = lazy(() => import("./components/pages/TvPageDetails"));
 const WatchMoviePage = lazy(() => import("./components/pages/WatchMoviePage"));
-const WatchTvMovie = lazy(() => import("./components/pages/WatchTvMovie"));
 
 function App() {
   return (

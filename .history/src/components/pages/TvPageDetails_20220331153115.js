@@ -14,7 +14,7 @@ const TvPageDetails = () => {
   // Navigate
   const navigate = useNavigate();
   const handleTvMovie = () => {
-    navigate(`watchTV/${id}`);
+    navigate(`/tv/:id/watchTV/${id}`);
   };
   // Call API
   const { data } = useSWR(tmdbAPI.getMovieTV(id), fetcher);
