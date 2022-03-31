@@ -11,25 +11,25 @@ const WatchTvMovie = () => {
 
   //
   const [query, setQuery] = useState(Number(1));
-  const [episode, setEpisode] = useState(Number(1));
+  console.log(
+    "🚀 ~ file: WatchTvMovie.js ~ line 14 ~ WatchTvMovie ~ query",
+    query
+  );
   // url
   const [url, setUrl] = useState(
-    `https://www.2embed.ru/embed/tmdb/tv?id=${id}&s=${query}&e=${episode}`
+    `https://www.2embed.ru/embed/tmdb/tv?id=${id}&s=${query}&e=1`
   );
   const handleChangeOption = (e) => {
     setQuery(Number(e.target.value));
-    setEpisode(Number(e.target.value));
   };
   //
   useEffect(() => {
-    if (query || episode) {
-      setUrl(
-        `https://www.2embed.ru/embed/tmdb/tv?id=${id}&s=${query}&e=${episode}`
-      );
+    if (query) {
+      setUrl(`https://www.2embed.ru/embed/tmdb/tv?id=${id}&s=${query}&e=1`);
     } else {
       setUrl(`https://www.2embed.ru/embed/tmdb/tv?id=${id}&s=1&e=1`);
     }
-  }, [episode, id, query]);
+  }, [id, query]);
   if (!data) return null;
   const dataSeason = data?.seasons;
   const dataInfo =
@@ -53,13 +53,33 @@ const WatchTvMovie = () => {
               ></iframe>
             </div>
           </div>
-          <div className="watchTV-select--movie">
+          <div>
             <div>
-              <h2 className="watchTV-select--title">Movie part</h2>
+              <h2>Phần phim</h2>
               <select
                 className="watchTV-select"
                 onChange={(e) => handleChangeOption(e)}
               >
+                {dataSeason &&
+                  dataSeason.length > 0 &&
+                  dataSeason.map((item) => (
+                    <option
+                      key={item.id}
+                      value={item.season_number}
+                      className="watchTV-option"
+                    >
+                      {`${
+                        Number(item.season_number) >= 1
+                          ? `Season ${Number(item.season_number)}`
+                          : "Season"
+                      }`}
+                    </option>
+                  ))}
+              </select>
+            </div>
+            <div>
+              <select>
+                <h2>Tập phim</h2>
                 {dataSeason &&
                   dataSeason.length > 0 &&
                   dataSeason.map((item) => (

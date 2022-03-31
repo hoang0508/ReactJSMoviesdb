@@ -1,6 +1,13 @@
 @import "../../index.scss";
 .watchTV {
-  padding: 25px 0;
+  padding: 30px 0;
+  &-video {
+    padding: 20px 0;
+    width: 100%;
+    &--iframe {
+      height: 550px;
+    }
+  }
   &-select--movie {
     display: flex;
     align-items: center;
@@ -16,23 +23,8 @@
     background-color: $bg-color-mv;
     color: #fff;
     &--title {
-      font-size: 22px;
+      font-size: 20px;
       margin-bottom: 10px;
-    }
-  }
-  @media screen and (min-width: 1024px) {
-    &-video {
-      padding: 20px 0;
-      width: 100%;
-      &--iframe {
-        height: 550px;
-      }
-    }
-  }
-  @media screen and (max-width: 767.98px) {
-    &-video {
-      margin-top: 20px;
-      margin-bottom: 240px;
     }
   }
 }
@@ -71,28 +63,5 @@
     word-break: break-word;
     font-style: italic;
     margin-bottom: 15px;
-  }
-  @media screen and (max-width: 767.98px) {
-    &-season {
-      flex-direction: column;
-      gap: 15px 0;
-    }
-    &-images {
-      width: 100%;
-      height: 0;
-      position: relative;
-      padding-bottom: 56.25%;
-    }
-    &-images > * {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    &-content {
-      width: 100%;
-    }
   }
 }

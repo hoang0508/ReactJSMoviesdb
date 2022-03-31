@@ -55,7 +55,7 @@ const WatchTvMovie = () => {
           </div>
           <div className="watchTV-select--movie">
             <div>
-              <h2 className="watchTV-select--title">Movie part</h2>
+              <h2 className="watchTV-select--title">Phần phim</h2>
               <select
                 className="watchTV-select"
                 onChange={(e) => handleChangeOption(e)}

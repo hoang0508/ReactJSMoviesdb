@@ -55,7 +55,7 @@ const WatchTvMovie = () => {
           </div>
           <div className="watchTV-select--movie">
             <div>
-              <h2 className="watchTV-select--title">Movie part</h2>
+              <h2 className="watchTV-select--title">Phần phim</h2>
               <select
                 className="watchTV-select"
                 onChange={(e) => handleChangeOption(e)}
@@ -77,6 +77,29 @@ const WatchTvMovie = () => {
                   ))}
               </select>
             </div>
+            {/* <div>
+              <h2 className="watchTV-select--title">Tập phim</h2>
+              <select
+                className="watchTV-select"
+                onChange={(e) => handleChangeOption(e)}
+              >
+                {dataSeason &&
+                  dataSeason.length > 0 &&
+                  dataSeason.map((item) => (
+                    <option
+                      key={item.id}
+                      value={item.episode_count}
+                      className="watchTV-option"
+                    >
+                      {`${
+                        Number(item.episode_count) >= 1
+                          ? `Episode ${Number(item.episode_count)}`
+                          : "Episode"
+                      }`}
+                    </option>
+                  ))}
+              </select>
+            </div> */}
           </div>
           <div>
             <WatchTVinfo item={dataInfo}></WatchTVinfo>
